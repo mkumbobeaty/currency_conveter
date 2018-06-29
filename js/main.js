@@ -1,0 +1,1 @@
+console.log("configured babel for es6")

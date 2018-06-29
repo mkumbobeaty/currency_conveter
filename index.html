@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>currency conveter</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h3 class="text-center">Currence converter</h3>
+        <div class="currency_conveter">
+            <label for="currency_from">Amount:</label>
+            <input class="form-control" type="text" value="1" id="currency_from" name="currency_from">
+            <div class="row" style="margin-top: 3%">
+                <div class="col-md-6">
+                    <label>From:</label>
+                    <select id="currency_fr">
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label>To:</label>
+                    <select id="currency_to">
+                    </select>
+                </div>
+            </div>
+            <button class="button postfix">Convert</button>
+            <div class="result">
+                <label for="curr_to">Result:</label>
+                <input class="form-control" type="text" id="curr_to" readonly="" placeholder="click Convert button">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="build/main.bundle.js"></script>
+</html>
