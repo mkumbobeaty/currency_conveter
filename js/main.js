@@ -1,5 +1,7 @@
+// import numeral from 'numeral-es6';
+
 let currencyData = () => {
-    const url = 'https://free.currencyconverterapi.com/api/v5/currencies'
+    const url = 'https://free.currencyconverterapi.com/api/v5/currencies';
     return fetch(url)
         .then(response => response.json())
         .then(currency => {
@@ -25,6 +27,30 @@ let selectDataFrom = (currencyValues = {}) =>{
         selectfro.appendChild(option);
     }
 
+};
+let convertCurrency = () => {
+    let from = document.getElementById('currency_fr').value;
+    let to = document.getElementById('currency_to').value;
+    let currency_conv = `${from}${'_'}${to}`;
+
+    let amount = document.getElementById('amount').value;
+    let result = document.getElementById('result');
+    if (from.length > 0 && to.length > 0 && amount.length > 0) {
+        let url = `https://free.currencyconverterapi.com/api/v5/convert?q=${currency_conv}`
+        return fetch(url)
+            .then(response => response.json())
+            .then(res => res.results)
+            .then(data => {
+                let currFact = Object.values(data)[0].val;
+                console.log("the currency")
+                console.log(currFact);
+                if(currFact != undefined) {
+                    result.innerHTML = parseFloat(amount)*parseFloat(currFact);
+                    console.log(result)
+                }
+
+            });
+    };
 };
 
 currencyData();

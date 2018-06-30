@@ -8,29 +8,27 @@
 
 <body>
 <div class="container">
-    <div class="jumbotron">
+    <div class="currency_conveter">
+    <div class="panel panel-success">
+        <div class="panel-heading">
         <h3 class="text-center">Currence converter</h3>
-        <div class="currency_conveter">
-            <label for="currency_from">Amount:</label>
-            <input class="form-control" type="text" value="1" id="currency_from" name="currency_from">
-            <div class="row" style="margin-top: 3%">
-                <div class="col-md-6">
-                    <label>From:</label>
-                    <select id="currency_fr">
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <label>To:</label>
-                    <select id="currency_to">
-                    </select>
-                </div>
+        </div>
+        <div class="panel-body">
+            <label for="amount">Amount:</label>
+            <input type="text"  id="amount" >
+            <div class="grid-container">
+                <div class="grid-item">From:</div>
+                <div class="grid-item"><select id="currency_fr"></select></div>
+                <div class="grid-item">To:</div>
+                <div class="grid-item"><select id="currency_to"></select></div>
             </div>
-            <button class="button postfix">Convert</button>
+            <button class="conv_button" onClick="convertCurrency()">Convert</button>
             <div class="result">
-                <label for="curr_to">Result:</label>
-                <input class="form-control" type="text" id="curr_to" readonly="" placeholder="click Convert button">
+                <label for="result">Result:</label>
+                <span id="result" ></span>
             </div>
         </div>
+    </div>
     </div>
 </div>
 </body>

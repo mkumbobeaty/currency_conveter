@@ -1,9 +1,41 @@
-.container{
+.container {
     margin-top: 5%;
 }
-.currency_conveter{
-    padding: 15px;
+@media (max-width: 767px) {
+    .currency_conveter{
+        padding: 15px;
+        width: 100%;
+    }
 }
-.form-control{
-    width: 55%;
+@media (min-width: 768px) {
+    .currency_conveter{
+        padding: 15px;
+        width: 40%;
+    }
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding:10px;
+}
+.grid-item {
+    padding: 20px;
+    text-align: center;
+}
+label{
+    margin-left: 9%;
+
+}
+.conv_button{
+    margin-left: 8%;
+    margin-bottom: 3%;
+    padding: 4px;
+    font-size: 16px;
+    background-color: #acd2aa;
+    border: 1px solid #bcd0e0;
+    border-radius: 3px;
+}
+.result{
+    font-size: 18px;
+
 }
