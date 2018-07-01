@@ -13,7 +13,8 @@
     "bootstrap3": "^3.3.5",
     "es6-polyfills": "^2.0.0",
     "numeral": "^2.0.6",
-    "numeral-es6": "^1.0.0"
+    "numeral-es6": "^1.0.0",
+    "serviceworker-cache-polyfill": "^4.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

@@ -3,7 +3,7 @@
 <head>
     <title>currency conveter</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap3/dist/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -33,4 +33,14 @@
 </div>
 </body>
 <script src="build/main.bundle.js"></script>
+<script>
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+            .then(function(registration) {
+                console.log('Service Worker Registered');
+            });
+    }
+</script>
+
+
 </html>
